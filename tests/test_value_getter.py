@@ -90,4 +90,4 @@ class TestValueGetter():
         getter = ValueGetter(getter_str)
 
         result = getter(d)
-        assert result == None
+        assert result is None
