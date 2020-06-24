@@ -25,9 +25,18 @@ We will create a filter that will return ``True`` for people living in Yorkshire
 
 ```python
 >>> from filters import Filter
->>> f = Filter(op1='.location', operator='eq', op2='Yorshire')
->>> f(person)
+>>> is_from_yorkshire = Filter(op1='.location', operator='eq', op2='Yorshire')
+>>> is_from_yorkshire(person)
 False
+```
+
+We can also apply some transformation to operands:
+
+```python
+>>> from filters import Filter
+>>> reads_a_lot = Filter(op1='.books', operator='ge', op2=3)
+>>> reads_a_lot(person)
+True
 ```
 
 Complex Queries
@@ -50,8 +59,8 @@ or when the person is older than 18. As this specification is more complex, the
 ...         "op2": 18
 ...     }
 ... }
->>> f = Filter.fromConfig(specs)
->>> f(person)
+>>> adult_got_fans = Filter.fromConfig(specs)
+>>> adult_got_fans(person)
 True
 ```
 

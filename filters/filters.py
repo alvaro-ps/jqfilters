@@ -58,13 +58,14 @@ A filter can be inspected in an easier way by just prompting it:
 from .value_getters import ValueGetter
 from .operations import Operation
 
-class Filter(object):
+class Filter:
     """Creates a filter that will be applied on a JSON object.
-    
+
     :argument operator: operation name that will be used.
     :argument op1: jq-like string with the query that fetches the key, which
         will be used as op1.
-    :argument op2: value for the second operand of `operation`.
+    :argument op2: jq-like string with the query that fetches the key, which
+        will be used as op2.
     :argument transform1: if present apply this function to op1 after getting it
     :argument transform2: if present apply this function to op2 after getting it
     """
@@ -72,11 +73,14 @@ class Filter(object):
         try:
             self.op1 = Filter(**op1)
         except TypeError:
+            # op1 is not a dictionary but a simple value
             self.op1 = ValueGetter(op1, transform=transform1)
         try:
             self.op2 = Filter(**op2)
         except TypeError:
+            # op2 is not a dictionary but a simple value
             self.op2 = ValueGetter(op2, transform=transform2)
+
         self.operator = Operation(operator)
 
     def __str__(self):
