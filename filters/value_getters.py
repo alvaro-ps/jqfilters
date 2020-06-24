@@ -43,9 +43,11 @@ class ValueGetter(object):
     :argument value:
 
         * a **jq-like expression**:  ``'.key1[].key2'``
-        * a **value**: anything that does not compile to a jq query (``1``, ``[1, 2, 3]``, ``'string'``)
+        * a **value**: anything that does not compile to a jq query
+            (``1``, ``[1, 2, 3]``, ``'string'``)
 
-    :argument transform: operation name that will be passed on to :class:`Operation <readers.filters.operations.Operation>`
+    :argument transform: operation name that will be passed on to
+        :class:`Operation <readers.filters.operations.Operation>`
     """
     def __init__(self, value, transform=None):
         self.value = value
@@ -71,7 +73,7 @@ class ValueGetter(object):
         :returns: [transformed] value from ``js``
         """
         if self.getter:
-            value = self.getter.one(js)
+            value = self.getter.first(js)
         else:
             value = self.value
         return self.transform(value)
