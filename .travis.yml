@@ -9,4 +9,4 @@ before_install:
 install:
 - pipenv install --dev
 script:
-- python3 -m pytest tests
+- python -m pytest tests
