@@ -30,11 +30,11 @@ We will create a filter that will return ``True`` for people living in Yorkshire
 False
 ```
 
-We can also apply some transformation to operands:
+We can also apply some transformation to operands (see `filters.operations`):
 
 ```python
 >>> from filters import Filter
->>> reads_a_lot = Filter(op1='.books', operator='ge', op2=3)
+>>> reads_a_lot = Filter(op1='.books', transform1='len', operator='ge', op2=3)
 >>> reads_a_lot(person)
 True
 ```
