@@ -30,7 +30,7 @@ Complex Queries
 ---------------
 We will create a filter that will return ``True`` when any of the ``key2`` s in the ``key1`` list
 contains the value 2 or ``key3`` equals 7. As this specification is more complex, the
-:meth:`fromConfig <readers.filters.filters.Filter.fromConfig>` method will be used.
+:meth:`fromConfig <Filter.fromConfig>` method will be used.
 
 >>> specs = {
 ...     "op1": {
@@ -53,6 +53,7 @@ A filter can be inspected in an easier way by just prompting it:
 
 >>> f
 >>> ((.key1[].key2 - contains - 2) - or - (.key3 - eq - 7))
+
 """
 from .value_getters import ValueGetter
 from .operations import Operation

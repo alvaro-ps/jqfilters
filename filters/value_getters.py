@@ -9,13 +9,13 @@ accept **one** parameter:
 * `len` when the getter returns a list
 * `int` in order to convert a string to a numeric value, ...
 
-See :mod:`readers.filters.operations`.
+See :mod:`filters.operations`.
 
 Usage
 -----
 .. code-block:: python
 
-    >>> from readers.filters.value_getters import ValueGetter
+    >>> from filters.value_getters import ValueGetter
     >>> js = {
     ...     "key1": [
     ...         {"key2": 1},
@@ -47,7 +47,7 @@ class ValueGetter(object):
             (``1``, ``[1, 2, 3]``, ``'string'``)
 
     :argument transform: operation name that will be passed on to
-        :class:`Operation <readers.filters.operations.Operation>`
+        :class:`Operation <filters.operations.Operation>`
     """
     def __init__(self, value, transform=None):
         self.value = value

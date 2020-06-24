@@ -6,12 +6,12 @@ The operations can be divided in two categories:
 
 One argument operations
 -----------------------
-When defining transformations (with the class :class:`Operation <readers.filters.operations.Operation>`). This should
+When defining transformations (with the class :class:`Operation <filters.operations.Operation>`). This should
 be operations on **one** argument
 
 Two argument operations
 -----------------------
-When creating filters (with :class:`Filter <readers.filters.filters.Filter>`) with functions applied
+When creating filters (with :class:`Filter <filters.filters.Filter>`) with functions applied
 on **two** operands, such as :func:`intersects`, :func:`in` or :func:`issuperset` for simple filters :func:`and` or
 :func:`or` when creating complex nested filters.
 
