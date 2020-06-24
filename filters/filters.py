@@ -21,7 +21,7 @@ Simple Queries
 --------------
 We will create a filter that will return ``True`` when ``key3`` is greather than 5.
 
->>> from readers import Filter
+>>> from filters import Filter
 >>> f = Filter(op1='.key3', operator='ge', op2=5)
 >>> f(js)
 False
@@ -29,8 +29,8 @@ False
 Complex Queries
 ---------------
 We will create a filter that will return ``True`` when any of the ``key2`` s in the ``key1`` list
-contains the value 2 or ``key3`` equals 7. As this specification is more complex, the :meth:`fromConfig <readers.filters.filters.Filter.fromConfig>` method
-will be used.
+contains the value 2 or ``key3`` equals 7. As this specification is more complex, the
+:meth:`fromConfig <readers.filters.filters.Filter.fromConfig>` method will be used.
 
 >>> specs = {
 ...     "op1": {
