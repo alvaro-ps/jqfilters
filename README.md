@@ -1,6 +1,9 @@
 # Filters
+[![Build Status](https://travis-ci.org/apastors/filters.png?branch=master)](https://travis-ci.org/apastors/filters)
 
-`filters` allows to easily create filter objects that will allow you to filt
+`filters` allows to easily create filter objects, which can be applied to JSON-like dictionaries.
+It is based on the popular JSON parsing tool [jq](https://stedolan.github.io/jq/manual/), so the
+syntax mimics jq's.
 
 For showing both, the same JSON object will be used:
 
