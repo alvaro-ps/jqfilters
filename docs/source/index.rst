@@ -1,4 +1,4 @@
-Welcome to filters's documentation!
+Welcome to jqfilters's documentation!
 ===================================
 
 .. toctree::
@@ -8,19 +8,19 @@ Welcome to filters's documentation!
 Filters
 -------
 
-.. automodule:: filters.filters
+.. automodule:: jqfilters.filters
     :members:
 
 Value getters
 -------------
 
-.. automodule:: filters.value_getters
+.. automodule:: jqfilters.value_getters
     :members:
 
 Operations
 ----------
 
-.. automodule:: filters.operations
+.. automodule:: jqfilters.operations
     :members:
 
 

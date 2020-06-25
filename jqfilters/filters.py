@@ -21,7 +21,7 @@ Simple Queries
 --------------
 We will create a filter that will return ``True`` when ``key3`` is greather than 5.
 
->>> from filters import Filter
+>>> from jqfilters import Filter
 >>> f = Filter(op1='.key3', operator='ge', op2=5)
 >>> f(js)
 False

@@ -1,7 +1,7 @@
 from pytest import raises
 
-from filters.value_getters import ValueGetter
-from filters.operations import identity
+from jqfilters.value_getters import ValueGetter
+from jqfilters.operations import identity
 
 class TestValueGetter():
     def test__init__notransfrom(self):

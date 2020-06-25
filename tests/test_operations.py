@@ -1,6 +1,6 @@
 from pytest import raises
 
-from filters.operations import Operation, OPERATORS
+from jqfilters.operations import Operation, OPERATORS
 
 def test_identity():
     f = OPERATORS['identity']

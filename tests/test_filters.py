@@ -1,7 +1,7 @@
 from pytest import raises
 
-from filters.filters import Filter
-from filters.operations import identity
+from jqfilters.filters import Filter
+from jqfilters.operations import identity
 
 class TestFilter():
     def test__init__ok_notransform(self):
