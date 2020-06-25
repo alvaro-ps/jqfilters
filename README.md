@@ -67,6 +67,6 @@ True
 A filter can be inspected in an easier way by just prompting it:
 
 ```python
->>> f
+>>> adult_got_fans
 >>> ((.books[].name - contains - A game of thrones) - or - (.age - ge - 18))
 ```
