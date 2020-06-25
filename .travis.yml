@@ -9,3 +9,10 @@ install:
 - pip install -r requirements-dev.txt
 script:
 - python -m pytest tests
+deploy:
+  provider: pypi  
+  username: "__token__"
+  on:
+    branch: production
+  password:
+    secure: W/eOyeya68w0p1gXV5Mq305xYLW+rbWhPWgaaQ6ZXou0qTcMfxrOSmrxdUz0PCXnJZJlk9bUSQ8hR5IID+jXjGWR+6CZmGVBE6+ghzs8MLxWEWIsugfu9COmf4K0qgOxFzBQADQ9xffXHtpUOcN9o/auCbCIGKSTf6AsvEkSbcWxEh5Lk5+vv6DIlCF7tm20MpkfROW5OGH4pAdtnrD8UI80+26M2HCcCCcLYyN+Le8ZE7rqQG89ddFAc5MN9/fx4gUJUVJSAI1KeQTlmY6TajzzJRFl7iHbmuADP0257XkmqxbO/47O7f4LGlnB8oIEeVJOWO5pIbIP6j4vLAo1IHsc6ACHVRVQDAiGQw6twIbipImFoI6gE/Rj9pih8urvMc2SrCoXvKgxqQP8/Dfve8Z+/L2EkTWUH9Y26JnwZT48FAYywhOD/37gvOxyudg7b0B325/L65q24CbkLgyMPLHOcAwTSxK/CVhEeLvsjJRIrDJQH232iyE8hbGk+whABSA7wI9zcCh/A1agfghLAWgGxFDCVx/Yr+V8uhYmeBf1R9TUGOTWN1F2i4tKIWluh5PeoI87pT/1phUg65ZMBioADSIjWx3T4tZDLYdxwpHTKJg6Nn95FNfT04MlFeHCpLW6bFn/0JQepPEVy9ZmkJfE6UJpknSRipElmrZZB5Y=

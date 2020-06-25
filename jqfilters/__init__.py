@@ -2,4 +2,4 @@
 """
 __version__ = '0.9.0'
 
-from .jqfilters import Filter
+from .filters import Filter
