@@ -1,6 +1,6 @@
 import setuptools
 
-from jqfilters import __version__
+__version__ = '0.9.5'
 
 with open('README.md', 'r') as fh:
     long_description = fh.read()
